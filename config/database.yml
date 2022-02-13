@@ -17,6 +17,6 @@ production:
   reconnect: false
   database: msstudio_production
   pool: 5
-  username: root
-  password: "Masaya3795"
-  host: localhost
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
