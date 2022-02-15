@@ -1,0 +1,18 @@
+<h1>ブログ作成画面</h1>
+<%= form_with model: @blog, url: :admin_blogs do |form| %>
+  <div class="field">
+    <%= form.label :title, "ブログタイトル" %>
+    <%= form.text_field :title %>
+  <div>
+  <div class="field">
+    <%= form.label :image, "グログイメージ写真" %>
+    <%= form.file_field :image %>
+  <div>
+  <div class="field">
+    <%= form.label :content, "ブログ記事" %>
+    <%= form.rich_text_area :content %>
+  <div>
+  <div class="field">
+    <%= form.submit "送信" %>
+<% end %>
+

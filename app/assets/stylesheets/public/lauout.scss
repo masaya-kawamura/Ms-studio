@@ -6,27 +6,44 @@ html, body {
   height: 100%;
 }
 div#wrapper {
-  position: relative;
   box-sizing: border-box;
   min-height: 100%;
   margin: 0 auto;
-  padding-bottom: 48px;
-  background-color: $gray;
 }
 header {
-  padding: 5px;
-  background-color: $dark_cyan;
-  color: $very_light_gray;
-  span.logo-mark {
-      font-weight: bold;
+  background-color: $white;
+  width: 10%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  .hamburger_icon {
+    position: absolute;
+    width: 20px;
+    top: 40px;
+    left: 40%;
+  }
+  .logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+  }
+  .insta_icon {
+    position: absolute;
+    width: 30px;
+    bottom: 30px;
+    left: 40%;
   }
 }
 footer {
+  display: none;
   bottom: 0;
   position: absolute;
   width: 100%;
   background-color: $dark_gray;
   color: $very_light_gray;
+  z-index: 8;
   p {
     text-align: center;
     padding: 5px;

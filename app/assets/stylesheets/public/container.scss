@@ -2,13 +2,17 @@
 
 div#wrapper {
   div#container {
-    h1 {
-      margin: 0;
-      padding: 9px 6px;
-      font-size: 16px;
-      font-weight: normal;
-      background-color: $very_dark_cyan;
-      color: $light_gray;
+    text-align: center;
+    padding-left: 10%;
+    width: 90%;
+    div#top_image {
+      position: absolute;
+      background-image: image-url('top_image.jpg');
+      height: 100vh;
+      width: 90vw;
+      background-size: cover;
+      background-position: center center;
+      z-index: 9;
     }
   }
 }
