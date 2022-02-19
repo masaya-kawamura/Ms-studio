@@ -1,5 +1,23 @@
 <header>
-  <%= image_tag 'hamburger_icon.png', class: 'hamburger_icon' %>
+  <%= image_tag 'hamburger_icon.png', class: 'hamburger_icon', id: 'open_nav' %>
   <%= link_to image_tag('logo.png', class: 'logo'), '/' %>
   <%= link_to image_tag('insta_icon.png', class: 'insta_icon'), '#' %>
 </header>
+<nav id="header_nav">
+  <ul>
+    <%= link_to 'TOP', "/" %>
+    <%= link_to 'GALLERY', public_gallery_path %>
+    <%= link_to 'TOPICS/BLOG',  public_blogs_path %>
+    <%= link_to 'CONTACT', "#" %>
+  </ul>
+</nav>
+
+<script>
+  'use strict'
+  $(document).on('turbolinks:load', function() { });
+  $(document).ready(function(){
+    $('#open_nav').on('click', function(){
+      $('#header_nav').toggleClass('show');
+    });
+  });
+</script>

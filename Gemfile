@@ -30,6 +30,7 @@ gem 'nokogiri'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
 end
 
 group :development do
@@ -43,7 +44,6 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end

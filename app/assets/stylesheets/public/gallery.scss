@@ -5,14 +5,14 @@ div#container {
   div.gallery_top_image {
     background-image: image-url('top_image.jpg');
     height: 50vh;
-    width: 90vw;
+    width: calc(100vw - 100px);
     background-size: cover;
     background-position: center center;
   }
   div.gallery_contents {
     text-align: center;
     width: 1000px;
-    margin: 100px;
+    margin: 50px auto;
     h3 {
       font-family: $title;
       font-weight: 100;

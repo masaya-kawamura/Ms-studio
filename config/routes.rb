@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :public, path: "" do
     root "top#index"
     get "gallery" => "galleries#index", as: :gallery
+    resources :blogs, only: [:index, :show]
   end
 
   namespace :admin do

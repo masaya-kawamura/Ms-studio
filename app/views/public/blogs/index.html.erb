@@ -1,2 +1,14 @@
-<h1>Public::Blogs#index</h1>
-<p>Find me in app/views/public/blogs/index.html.erb</p>
+<div id="blog_top_image"></div>
+
+<div class="blog_container">
+<h3 class="blog_title">Topics & Blog</h3>
+  <% @blogs.each do |blog| %>
+    <%= link_to public_blog_path(blog.id) do %>
+      <div class="blog_item">
+        <%= image_tag blog.image.url %></br>
+        <h5 class="blog_title"><%= blog.title %></h5>
+        <p class="blog_date"><%= blog.created_at.strftime('%Y/%m/%d') %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

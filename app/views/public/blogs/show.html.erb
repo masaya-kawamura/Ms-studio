@@ -1,2 +1,12 @@
-<h1>Public::Blogs#show</h1>
-<p>Find me in app/views/public/blogs/show.html.erb</p>
+<% @title = "Topics & Blog" %>
+<div class="blog_show_container">
+  <%= image_tag @blog.image.url %>
+  <p class="blog_date"><%= @blog.created_at.strftime('%Y/%m/%d %H:%M') %></p>
+  <h4><%= @blog.title%></h4>
+  <p class="blog_text"><%= @blog.content %></p>
+</div>
+<%= link_to public_blogs_path do %>
+  <button class="blog_back_button">Back To Blog Top</button>
+<% end %>
+
+

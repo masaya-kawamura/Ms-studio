@@ -10,6 +10,12 @@ class Admin::BlogsController < Admin::Base
   end
 
   def create
+    @blog = Blog.new(blog_params)
+    if @blog.save
+      redirect_to :admin_blogs
+    else
+      render :blogs_new
+    end
   end
 
   def edit
@@ -21,5 +27,9 @@ class Admin::BlogsController < Admin::Base
   end
 
   def destroy
+  end
+
+  def blog_params
+    params.require(:blog).permit(:title, :image, :content)
   end
 end

@@ -1,10 +1,12 @@
+<% @title = "Photo Gallery" %>
 <div class="gallery_top_image"></div>
-
 <div class="gallery_contents">
   <h3>PHOTO GALLERY</h3>
   <div class="gallery_photo_image">
     <% @photos.each do |photo| %>
-      <%= image_tag photo.image.url %>
+      <%= link_to photo.image.url, "data-lightbox" => "gallery_image" do %>
+        <%= image_tag photo.image.url, height: '250', :style=>"width: 300;" %>
+      <% end %>
     <% end %>
   </div>
 </div>
